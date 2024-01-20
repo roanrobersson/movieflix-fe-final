@@ -1,9 +1,18 @@
+import { ToastContainer } from "react-toastify";
+
+import "assets/styles/custom.scss";
+import "react-toastify/dist/ReactToastify.css";
 import "./App.css";
-import "./assets/styles/custom.scss";
 
+import Router from "./Router";
 
-function App() {
-  return <div>Running</div>;
-}
+const App = () => {
+	return (
+		<>
+			<Router />
+			<ToastContainer />
+		</>
+	);
+};
 
 export default App;
