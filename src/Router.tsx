@@ -19,7 +19,7 @@ const Router = () => (
 			<Route
 				path="/movies"
 				element={
-					<PrivateRoute allowedRoles={["ROLE_ADMIN", "ROLE_MEMBER"]}>
+					<PrivateRoute>
 						<Catalog />
 					</PrivateRoute>
 				}
@@ -27,7 +27,7 @@ const Router = () => (
 			<Route
 				path="/movies/:movieId"
 				element={
-					<PrivateRoute allowedRoles={["ROLE_ADMIN", "ROLE_MEMBER"]}>
+					<PrivateRoute>
 						<MovieDetails />
 					</PrivateRoute>
 				}

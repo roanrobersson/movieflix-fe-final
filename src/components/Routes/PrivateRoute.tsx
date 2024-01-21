@@ -4,7 +4,7 @@ import { Navigate, useLocation } from "react-router-dom";
 import { isAllowedByRole, isAuthenticated, Role } from "utils/auth";
 
 type Props = PropsWithChildren & {
-	allowedRoles: Role[];
+	allowedRoles?: Role[];
 };
 
 const PrivateRoute: FC<Props> = ({ allowedRoles, children }) => {
