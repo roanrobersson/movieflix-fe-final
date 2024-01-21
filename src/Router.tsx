@@ -2,7 +2,7 @@ import { Navigate, Route, Routes } from "react-router-dom";
 import Auth from "pages/Auth";
 import Login from "pages/Auth/components/Login";
 import Catalog from "pages/Catalog";
-import MovieDetails from "pages/Catalog/components/MovieDetails";
+import MovieDetail from "pages/MovieDetail";
 
 import Navbar from "components/Navbar";
 import { CustomBrowserRouter } from "components/Routes/CustomBrowserRouter";
@@ -28,7 +28,7 @@ const Router = () => (
 				path="/movies/:movieId"
 				element={
 					<PrivateRoute>
-						<MovieDetails />
+						<MovieDetail />
 					</PrivateRoute>
 				}
 			/>

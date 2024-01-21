@@ -8,11 +8,11 @@ $body-bg: #525252;
 $body-color: #fff;
 
 $container-max-widths: (
-	sm: 540px,
-	md: 720px,
-	lg: 960px,
-	xl: 1127px,
-	xxl: 1320px
+	sm: 100%,
+	md: 100%,
+	lg: 100%,
+	xl: 100%,
+	xxl: 1144px // 24px a mais pra compensar o padding do container
 );
 
 @import "../../../node_modules/bootstrap/scss/bootstrap";

@@ -26,15 +26,13 @@ const Navbar = () => {
 
 			<div className="user-info-dnone text-right">
 				{currentUser && (
-					<>
-						<button
-							type="button"
-							className="btn-out btn-outline-secondary btn"
-							onClick={handleLogout}
-						>
-							Sair
-						</button>
-					</>
+					<button
+						type="button"
+						className="btn-out btn-outline-secondary btn"
+						onClick={handleLogout}
+					>
+						Sair
+					</button>
 				)}
 			</div>
 		</nav>

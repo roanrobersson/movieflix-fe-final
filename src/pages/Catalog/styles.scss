@@ -1,6 +1,9 @@
 .catalog-container {
-	margin: 50px auto;
-	width: 67%;
+	display: flex;
+	flex-direction: column;
+	margin-top: 40px;
+	margin-bottom: 50px;
+	gap: 40px;
 }
 
 .filter-container {
@@ -35,20 +38,24 @@
 }
 
 .catalog-movies {
-	margin-top: 43px;
-	display: flex;
-	flex-direction: column;
 	gap: 28px;
-	// display: grid;
-	// grid-template-columns: repeat(auto-fill, 250px);
-	// grid-gap: 33px 27px;
-	// justify-content: space-between;
+	display: flex;
+	flex-wrap: wrap;
+	justify-content: space-between;
 }
 
-@media (max-width: 2000px) {
+@media (max-width: 1200px) {
 	.catalog-container {
-		margin: 50px auto;
-		width: 75%;
+		margin-bottom: 50px;
+		padding-left: 40px;
+		padding-right: 40px;
+	}
+}
+
+@media (max-width: 992px) {
+	.catalog-movies {
+		display: grid;
+		grid-template-columns: 1fr 1fr;
 	}
 }
 
@@ -61,15 +68,29 @@
 	.catalog-title {
 		margin-bottom: 20px;
 	}
-
-	.catalog-movies {
-		grid-template-columns: repeat(auto-fill, 200px);
-		grid-gap: 33px 10px;
-	}
 }
 
 @media (max-width: 576px) {
+	.catalog-container {
+		margin-top: 20px;
+		margin-bottom: 20px;
+		padding-left: 20px;
+		padding-right: 20px;
+		gap: 20px;
+	}
+
 	.catalog-movies {
-		grid-template-columns: repeat(auto-fill, 100%);
+		gap: 20px;
+	}
+}
+
+@media (max-width: 320px) {
+	.catalog-movies {
+		grid-template-columns: 1fr;
+	}
+
+	.catalog-container {
+		padding-left: 10px;
+		padding-right: 10px;
 	}
 }

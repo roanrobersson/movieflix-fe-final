@@ -16,11 +16,12 @@ type FormState = {
 	movieId: number;
 };
 
-const MovieDetailsAddReview = ({ id, onAddReview }: ParamsType) => {
+const AddReview = ({ id, onAddReview }: ParamsType) => {
 	const {
 		register,
 		handleSubmit,
-		formState: { errors }
+		formState: { errors },
+		reset
 	} = useForm<FormState>();
 
 	const onSubmit = (data: FormState) => {
@@ -33,6 +34,7 @@ const MovieDetailsAddReview = ({ id, onAddReview }: ParamsType) => {
 			.then((response) => {
 				toast.info("Obrigado pela sua Avaliação!");
 				onAddReview(response.data);
+				reset();
 			})
 			.catch(() => {
 				toast.error("Houve um erro na validação de seu comentário.");
@@ -59,4 +61,4 @@ const MovieDetailsAddReview = ({ id, onAddReview }: ParamsType) => {
 	);
 };
 
-export default MovieDetailsAddReview;
+export default AddReview;

@@ -7,7 +7,7 @@ type Props = {
 	commentReview?: string;
 };
 
-const MovieDetailsReview = ({ autorReview, commentReview }: Props) => {
+const Review = ({ autorReview, commentReview }: Props) => {
 	return (
 		<div className="container-form-list-reaviews">
 			<div>
@@ -22,4 +22,4 @@ const MovieDetailsReview = ({ autorReview, commentReview }: Props) => {
 		</div>
 	);
 };
-export default MovieDetailsReview;
+export default Review;
